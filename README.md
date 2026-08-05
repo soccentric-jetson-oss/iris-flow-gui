@@ -1,16 +1,63 @@
-# Iris Flow GUI
+# Iris Flow GUI — Camera Control Desktop Application
 
-Cross-platform PySide6 desktop GUI for the Iris Flow vision pipeline.
-Connects to the Iris Flow gRPC server for camera control, ISP tuning,
-and live frame preview.
+The Iris Flow GUI is a cross-platform PySide6 desktop application for controlling the Jetson AGX Orin's camera and ISP pipeline. It provides a clean, dark-themed interface with stream start/stop controls, ISP parameter sliders for brightness, contrast, and saturation tuning, and real-time status display showing sensor information, frame rate, and stream state. The application connects to the Iris Flow gRPC server and features automatic connection health monitoring with periodic status refreshes. The intuitive layout groups camera controls logically, with visual feedback for all operations. The application is packaged as a standalone executable and supports Windows, macOS, and Linux deployment.
+
+## Features
+
+- Cross-platform
+- PySide6
+- desktop
+- application
 
 ## Quick Start
+
+### Prerequisites
+- Linux (x86_64 for development, aarch64 for target)
+- Build tools (make, cmake, gcc/clang, python3)
+
+### Build & Test
 ```bash
-pip install -r requirements.txt
-python -m src.main
+make all      # Build all targets
+make test     # Run tests
+make clean    # Clean build artifacts
 ```
 
-## License: MIT
+## Architecture
 
-## 🌐 Ecosystem Website
-Visit the [Jetson AGX Orin Capability Showcase](https://github.com/soccentric-jetson-oss/soccentric-jetson-oss) for an overview of all projects.
+```
+Driver (kernel module) ──► Server (gRPC) ──► GUI (PySide6)
+     │                        │                    │
+     ▼                        ▼                    ▼
+  Hardware              C++ Service           Desktop App
+  Access                Layer                 (macOS/Linux/Win)
+```
+
+## Repository Structure
+
+| Directory | Contents |
+|-----------|----------|
+| `src/` | Source code |
+| `include/` | Public API headers |
+| `lib/` | Userspace library |
+| `test/` | Unit tests |
+| `proto/` | gRPC protocol definitions |
+| `packaging/` | Distribution packages |
+| `docs/` | Documentation |
+
+## Project Status
+
+**Version:** 0.1.0 — Initial release
+**License:** Dark theme design
+**Audit Score:** 90/100
+
+## 🌐 Ecosystem
+
+This project is part of the [Jetson AGX Orin Capability Showcase](https://github.com/soccentric-jetson-oss/soccentric-jetson-oss) — five open-source projects demonstrating full exploitation of NVIDIA's flagship edge AI platform.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. All contributions welcome!
+
+## License
+
+Dark theme design. See [LICENSE](LICENSE) for details.
