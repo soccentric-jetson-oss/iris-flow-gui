@@ -8,6 +8,50 @@ The Iris Flow GUI is a cross-platform PySide6 desktop application for controllin
 - PySide6
 - desktop
 - application
+- Dark
+- theme
+- design
+- Camera
+- stream
+- start/stop
+- controls
+- ISP
+- parameter
+- sliders
+- (brightness,
+- contrast,
+- saturation)
+- Real-time
+- sensor
+- status
+- display
+- Frame
+- rate
+- and
+- stream
+- state
+- monitoring
+- gRPC
+- client
+- with
+- auto-reconnect
+- Periodic
+- health
+- check
+- polling
+- Intuitive
+- control
+- layout
+- Visual
+- feedback
+- for
+- all
+- operations
+- Standalone
+- executable
+- packaging
+- MIT
+- licensed
 
 ## Quick Start
 
@@ -20,16 +64,6 @@ The Iris Flow GUI is a cross-platform PySide6 desktop application for controllin
 make all      # Build all targets
 make test     # Run tests
 make clean    # Clean build artifacts
-```
-
-## Architecture
-
-```
-Driver (kernel module) ──► Server (gRPC) ──► GUI (PySide6)
-     │                        │                    │
-     ▼                        ▼                    ▼
-  Hardware              C++ Service           Desktop App
-  Access                Layer                 (macOS/Linux/Win)
 ```
 
 ## Repository Structure
@@ -47,10 +81,10 @@ Driver (kernel module) ──► Server (gRPC) ──► GUI (PySide6)
 ## Project Status
 
 **Version:** 0.1.0 — Initial release
-**License:** Dark theme design
+**License:** MIT
 **Audit Score:** 90/100
 
-## 🌐 Ecosystem
+## Ecosystem
 
 This project is part of the [Jetson AGX Orin Capability Showcase](https://github.com/soccentric-jetson-oss/soccentric-jetson-oss) — five open-source projects demonstrating full exploitation of NVIDIA's flagship edge AI platform.
 
@@ -60,4 +94,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. All contributions welcome
 
 ## License
 
-Dark theme design. See [LICENSE](LICENSE) for details.
+MIT. See [LICENSE](LICENSE) for details.
