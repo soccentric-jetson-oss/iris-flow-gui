@@ -14,7 +14,7 @@ class HeaderWidget(QFrame):
         super().__init__(parent)
         self.setFixedHeight(50)
         self.setStyleSheet(
-            "background: #1a1a2e; border-bottom: 1px solid #2a2a4a;"
+            "background: #ffffff; border-bottom: 1px solid #e0e0e0;"
         )
 
         layout = QHBoxLayout(self)
@@ -22,14 +22,14 @@ class HeaderWidget(QFrame):
 
         title = QLabel("Iris Flow — Vision Pipeline")
         title.setStyleSheet(
-            "color: #64b5f6; font-size: 16px; font-weight: bold;"
+            "color: #1976D2; font-size: 16px; font-weight: bold;"
         )
         layout.addWidget(title)
         layout.addStretch()
 
         self.status_label = QLabel("Disconnected")
         self.status_label.setStyleSheet(
-            "color: #f44336; font-size: 12px;"
+            "color: #D32F2F; font-size: 12px;"
         )
         layout.addWidget(self.status_label)
 
@@ -38,10 +38,10 @@ class HeaderWidget(QFrame):
         if connected:
             self.status_label.setText("Connected")
             self.status_label.setStyleSheet(
-                "color: #4caf50; font-size: 12px;"
+                "color: #388E3C; font-size: 12px;"
             )
         else:
             self.status_label.setText("Disconnected")
             self.status_label.setStyleSheet(
-                "color: #f44336; font-size: 12px;"
+                "color: #D32F2F; font-size: 12px;"
             )

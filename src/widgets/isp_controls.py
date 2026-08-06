@@ -23,14 +23,14 @@ class IspControls(QObject):
 
     def _build_ui(self):
         self._frame.setStyleSheet(
-            "background:#1a1a2e; border:1px solid #2a2a4a; "
+            "background:#ffffff; border:1px solid #e0e0e0; "
             "border-radius:12px; padding:16px;"
         )
         layout = QVBoxLayout(self._frame)
 
         title = QLabel("ISP Controls")
         title.setStyleSheet(
-            "color:#e0e0e0; font-size:14px; font-weight:bold;"
+            "color:#212121; font-size:14px; font-weight:bold;"
         )
         layout.addWidget(title)
 
@@ -38,15 +38,15 @@ class IspControls(QObject):
             row = QHBoxLayout()
             label = QLabel(f"{name}:")
             label.setFixedWidth(100)
-            label.setStyleSheet("color:#aaa;")
+            label.setStyleSheet("color:#616161;")
 
             slider = QSlider(Qt.Horizontal)
             slider.setRange(0, 255)
             slider.setValue(128)
             slider.setStyleSheet(
-                "QSlider::groove:horizontal {background:#2a2a4a; "
+                "QSlider::groove:horizontal {background:#e0e0e0; "
                 "height:4px; border-radius:2px;} "
-                "QSlider::handle:horizontal {background:#64b5f6; "
+                "QSlider::handle:horizontal {background:#1976D2; "
                 "width:16px; border-radius:8px; margin:-6px 0;}"
             )
             self._sliders[name.lower()] = slider
@@ -57,7 +57,7 @@ class IspControls(QObject):
 
         apply_btn = QPushButton("Apply ISP Settings")
         apply_btn.setStyleSheet(
-            "background:#64b5f6; color:#0f0f1a; border:none; "
+            "background:#1976D2; color:#212121; border:none; "
             "border-radius:8px; padding:8px 20px; font-weight:bold;"
         )
         apply_btn.clicked.connect(self._on_apply)

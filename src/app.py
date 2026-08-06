@@ -53,7 +53,7 @@ class IrisFlowApp(QMainWindow):
 
         # Content area
         content = QWidget()
-        content.setStyleSheet("background: #0f0f1a;")
+        content.setStyleSheet("background: #f5f5f5;")
         cl = QVBoxLayout(content)
         cl.setContentsMargins(24, 20, 24, 20)
         cl.setSpacing(16)
@@ -68,7 +68,7 @@ class IrisFlowApp(QMainWindow):
 
         # Status text
         self._status_text = QLabel("Status: Idle")
-        self._status_text.setStyleSheet("color:#888; font-size:12px;")
+        self._status_text.setStyleSheet("color:#616161; font-size:12px;")
         cl.addWidget(self._status_text)
         cl.addStretch()
 

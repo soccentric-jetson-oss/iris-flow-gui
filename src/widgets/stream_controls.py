@@ -21,7 +21,7 @@ class StreamControls(QObject):
     def _build_ui(self):
         self.start_btn = QPushButton("▶ Start Stream")
         self.start_btn.setStyleSheet(
-            "background:#4caf50; color:white; border:none; "
+            "background:#388E3C; color:white; border:none; "
             "border-radius:8px; padding:10px 24px; font-weight:bold;"
         )
         self.start_btn.clicked.connect(self.start_clicked.emit)
@@ -29,7 +29,7 @@ class StreamControls(QObject):
 
         self.stop_btn = QPushButton("■ Stop Stream")
         self.stop_btn.setStyleSheet(
-            "background:#f44336; color:white; border:none; "
+            "background:#D32F2F; color:white; border:none; "
             "border-radius:8px; padding:10px 24px; font-weight:bold;"
         )
         self.stop_btn.clicked.connect(self.stop_clicked.emit)
