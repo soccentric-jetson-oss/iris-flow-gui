@@ -9,8 +9,8 @@ class TestImports(unittest.TestCase):
         self.assertTrue(True)
     
     def test_protobuf_import(self):
-        from src.client import $(basename $dir | tr '-' '_')_pb2
-        self.assertTrue(True)
+        from src.client import iris_flow_pb2
+        self.assertIsNotNone(iris_flow_pb2)
 
 if __name__ == "__main__":
     unittest.main()

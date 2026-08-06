@@ -3,8 +3,8 @@ requires = ["setuptools>=68.0", "wheel"]
 build-backend = "setuptools.backends._legacy:_Backend"
 
 [project]
-name = "$(basename $dir)"
+name = "iris-flow-gui"
 version = "0.1.0"
-description = "$(basename $dir) - PySide6 GUI"
+description = "iris-flow-gui - PySide6 GUI"
 requires-python = ">=3.9"
 dependencies = ["PySide6>=6.5", "grpcio>=1.50", "protobuf>=3.21"]
